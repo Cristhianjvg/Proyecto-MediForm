@@ -1,6 +1,5 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormularioComponent } from './formulario/formulario.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -22,10 +21,9 @@ const routes: Routes = [
     path: 'register',
     component: RegisterComponent
   },
-  {
-    path: 'form',
-    component: FormularioComponent
-  }
+
+  { path: 'form', loadChildren: () => import('./pages/form/form.module').then(m => m.FormModule) },
+  { path: 'pr-ciudad', loadChildren: () => import('./pages/pr-ciudad/pr-ciudad.module').then(m => m.PrCiudadModule) }
 ];
 
 @NgModule({

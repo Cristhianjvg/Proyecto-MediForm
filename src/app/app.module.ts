@@ -14,10 +14,11 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
-import { FormularioComponent } from './formulario/formulario.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideFirestore,getFirestore,  } from '@angular/fire/firestore';
+
+
 
 
 registerLocaleData(es);
@@ -28,7 +29,6 @@ registerLocaleData(es);
     LoginComponent,
     HomeComponent,
     RegisterComponent,
-    FormularioComponent
   ],
   imports: [
     BrowserModule,
@@ -48,4 +48,6 @@ registerLocaleData(es);
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
