@@ -23,7 +23,8 @@ const routes: Routes = [
   },
 
   { path: 'form', loadChildren: () => import('./pages/form/form.module').then(m => m.FormModule) },
-  { path: 'pr-ciudad', loadChildren: () => import('./pages/pr-ciudad/pr-ciudad.module').then(m => m.PrCiudadModule) }
+  { path: 'pr-ciudad', loadChildren: () => import('./pages/pr-ciudad/pr-ciudad.module').then(m => m.PrCiudadModule) },
+  { path: 'hospital', loadChildren: () => import('./pages/hospital/hospital.module').then(m => m.HospitalModule) }
 ];
 
 @NgModule({

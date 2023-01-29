@@ -1,0 +1,99 @@
+<body>
+    <main>
+      <!--<div class="container" >
+
+        <section class="section" >
+            <div class="row" >
+              <div class="izquierda" style="margin: 0; ">
+      
+                <div class="card" style="background-color: #C4D79B;">
+                  <div class="card-body">
+                    <h5 class="card-title">Horizontal Form</h5>
+                  </div>
+                </div>
+      
+              </div>
+      
+              <div class="derecha" style="margin: 0;">
+      
+                <div class="card" >
+                  <div class="card-body">
+                    <h5 class="card-title">Vertical Form</h5>
+                  </div>
+                </div>
+      
+                
+      
+              </div>
+            </div>
+          </section>
+  
+      </div>-->
+
+      <div class="contenedor" style="display: flex; flex-direction: row; ">
+        <div class="izquierda" style="background-color: #C4D79B; height: 721px; width: 850px; text-align: center;">
+            <div class="col-lg-7" style="margin-left: 320px; margin-top: 125px; ">
+            <div class="card" style="background-color: #C4D79B; box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
+            height: 450px;">
+                <div class="card-body" >
+                  <h5 class="card-title">Ingresa tu Hospital</h5>
+
+                  <div class="icon">
+                    <i class="bi bi-geo-alt-fill"></i>
+                  </div>
+
+                  <div class="col-sm-12" style="margin-top:50px;  width: 400px;">
+
+                    <select class="form-select" aria-label="Default select example"
+                     style="border-radius: 20px; font-size: 20px; background-color: #C4D79B;">
+                     <option *ngFor="let hosp of hospitales " [value]="hosp.id">{{hosp.NombreHospital}}</option>
+                    </select>
+                  </div>
+                  
+
+                    
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="derecha" style="height: 721px; width: 850px">
+            <div class="col-lg-6" style=" margin-top: 125px; width: 400px; border-radius: 0px;">
+  
+                <div class="card" style="box-shadow:
+                      0.3em 0.3em 1em rgba(0,0,0,0.3); height: 450px;">
+                  <div class="card-body">
+                    <img src="../../../assets/img/Lifesavers Using Computer.png" alt="" style="margin: 50px 0px; width: 300px; height: 250px;">
+                  </div>
+                </div>
+            </div>
+
+            <button style="float: right; margin-top: 100px; margin-right: 10px; border-width: 0px; background-color: #FFF;"><a href="../../home" style="color: rgb(0, 0, 0);">siguiente ></a></button>
+            
+        </div>
+      </div>
+
+      <!--
+      <section class="section">
+        <div class="row">
+          <div class="col-lg-6">
+  
+            
+  
+          </div>
+  
+          
+        </div>
+      </section>-->
+      
+    </main>
+  
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+  
+  </body>
+
+  <script>
+    document.getElementById('body').classList.remove('card-mb-3');
+  </script>
+  
+  

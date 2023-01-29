@@ -47,20 +47,15 @@
         <div class="derecha">
             <div class="col-sm-12" style="margin: 200px 50px 50px 50px; width: 400px;">
               <label for="" style="margin-bottom: 10px;">Para ingresar empieza:</label>
-              <select class="form-select" aria-label="Default select example" style="border-radius: 20px; font-size: 20px; background-color: #C4D79B;">
-                <option selected style="text-align: center;">PROVINCIA</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+              <select class="form-select" aria-label="Default select example"
+               style="border-radius: 20px; font-size: 20px; background-color: #C4D79B;">
+               <option *ngFor="let pr of provincia" [value]="pr.id">{{pr.NombreProvincia}}</option>
               </select>
             </div>
 
             <div class="col-sm-12" style="margin: 0px 0px 0px 50px; width: 400px;">
               <select class="form-select" aria-label="Default select example" style="border-radius: 20px; font-size: 20px; background-color: #C4D79B;">
-                <option selected style="text-align: center;">CIUDAD</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option *ngFor="let city of ciudad" [value]="city.id">{{city.NombreCiudad}}</option>
               </select>
             </div>
 
