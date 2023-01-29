@@ -22,6 +22,7 @@ import { provideFirestore,getFirestore,  } from '@angular/fire/firestore';
 
 
 
+
 registerLocaleData(es);
 
 @NgModule({
