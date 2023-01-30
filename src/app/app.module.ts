@@ -17,6 +17,8 @@ import { RegisterComponent } from './register/register.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore,  } from '@angular/fire/firestore';
+import { PrincipalComponent } from './pages/principal/principal.component';
+
 
 registerLocaleData(es);
 
@@ -26,6 +28,7 @@ registerLocaleData(es);
     LoginComponent,
     HomeComponent,
     RegisterComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,

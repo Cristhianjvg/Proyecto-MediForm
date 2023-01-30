@@ -62,7 +62,7 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td><textarea class="form-control" style="height: 100px">{{pr.causas}}</textarea></td>
+                      <td><textarea class="form-control" style="height: 100px">{{pr.causas[oI]}}</textarea></td>
                     </tr>
                   </tbody>
                 </table>
@@ -126,7 +126,7 @@
               sabremos que el cambio realizado produjo una mejora en el proceso?</em></label>
           <div *ngFor="let pr of problema | filter:id">
             <ng-container *ngFor="let a of pr.indicador let qI = index">
-              <label for="">{{pr.indicador}}
+              <label for="">{{pr.indicador[qI]}}
                 <div class="row mb-3">
                   <label for="inputNumber" class="col-sm-1 col-form-label">N° 1 = </label>
                   <div class="col-sm-2">
@@ -167,7 +167,7 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td><textarea class="form-control" style="height: 100px">{{pr.accion}}</textarea></td>
+                      <td><textarea class="form-control" style="height: 100px">{{pr.accion[qI]}}</textarea></td>
                     </tr>
                   </tbody>
                 </table>
@@ -176,12 +176,6 @@
             <!--<div class="col-sm-10">
                   <textarea class="form-control" style="height: 100px"></textarea>
                 </div>-->
-          </div>
-
-          <div class="row mb-3">
-            <div class="col-sm-10" style="margin-top: 20px; margin-left: 1000px;">
-              <button type="submit" class="btn btn-primary" style="background-color: #C4D79B;">Guardar </button>
-            </div>
           </div>
 
           <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
@@ -200,20 +194,45 @@
               </tr>
             </thead>
 
-            <div *ngFor="let pr of problema | filter:id">
-              <ng-container *ngFor="let a of pr.accion let qI = index">
-                <tbody>
-                  <tr>
-                    <th scope="row">{{pr.accion}}</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+            <!--<div >-->
+              <!--<ng-container >-->
+                <tbody *ngFor="let pr of problema | filter:id " >
+                  <tr *ngFor="let a of pr.accion let qI = index">
+                    <th scope="row">{{pr.accion[qI]}}</th>
+                    <td><div class="row mb-3">
+                      <div class="col-sm-10">
+                        <textarea class="form-control" style="height: 50px"></textarea>
+                      </div>
+                    </div></td>
+                    <td><div class="row mb-3">
+                      <div class="col-sm-10">
+                        <textarea class="form-control" style="height: 50px"></textarea>
+                      </div>
+                    </div></td>
+                    <td><div class="row mb-3">
+                      <div class="col-sm-10">
+                        <textarea class="form-control" style="height: 50px"></textarea>
+                      </div>
+                    </div></td>
+                    <td><div class="row mb-3">
+                      <div class="col-sm-10">
+                        <textarea class="form-control" style="height: 50px"></textarea>
+                      </div>
+                    </div></td>
+                    <td><div class="row mb-3">
+                      <div class="col-sm-10">
+                        <textarea class="form-control" style="height: 50px"></textarea>
+                      </div>
+                    </div></td>
+                    <td><div class="row mb-3">
+                      <div class="col-sm-10">
+                        <textarea class="form-control" style="height: 50px"></textarea>
+                      </div>
+                    </div></td>
                   </tr>
                 </tbody>
-              </ng-container>
-            </div>
+              <!--</ng-container>-->
+            <!--</div>-->
           </table>
 
           <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
@@ -273,11 +292,15 @@
             </tbody>
           </table>
 
-        </form>
+          <div class="row mb-3">
+            <div class="col-sm-3" style="margin-top: 20px; margin-left: 1000px;">
+              <button type="submit" class="btn btn-primary" style="background-color: #C4D79B;">Guardar </button>
+            </div>
+          </div>
 
+        </form>
       </div>
     </div>
-
   </main><!-- End #main -->
 
 </body>
