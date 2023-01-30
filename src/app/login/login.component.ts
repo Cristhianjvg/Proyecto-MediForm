@@ -1,5 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { FormBuilder, Validators} from '@angular/forms';
+import { Usuario } from '../models/usuario';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +10,14 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent implements OnInit{
 
-  constructor(){
+  public f = this.form.group({
+    NombreUsuario: ['', Validators.required],
+    ContrasenaUsuario: ['', Validators.required]
+  })
+
+  formSubmitted = false;
+
+  constructor(private form : FormBuilder){
 
   }
 
@@ -16,10 +25,17 @@ export class LoginComponent implements OnInit{
 
   }
 
-  async login(form:NgForm){
+  login(){
 
-    const email = form.value.email;
-    const password = form.value.password;
+    this.formSubmitted = true;
+    console.log("this.f", this.f);
 
+    const data: Usuario = {
+      NombreUsuario : this.f.controls.NombreUsuario.value,
+      ContrasenaUsuario: this.f.controls.ContrasenaUsuario.value
+    } as Array<Usuario>;
+
+    console.log(data);
   }
+
 }

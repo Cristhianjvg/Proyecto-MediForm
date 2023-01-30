@@ -11,7 +11,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzInputModule } from 'ng-zorro-antd/input';
-import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
@@ -27,7 +26,6 @@ registerLocaleData(es);
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     HomeComponent,
     RegisterComponent,
   ],
