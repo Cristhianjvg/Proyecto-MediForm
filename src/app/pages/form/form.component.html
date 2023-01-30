@@ -183,6 +183,96 @@
               <button type="submit" class="btn btn-primary" style="background-color: #C4D79B;">Guardar </button>
             </div>
           </div>
+
+          <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
+              text-align: left; margin-bottom: 10px; color: #444e6a;"> <b> 4. Planificar</b></label>
+
+          <table class="table table-bordered" style="border-color: #C4D79B;">
+            <thead>
+              <tr>
+                <th scope="col">Cambio</th>
+                <th scope="col">Actividades</th>
+                <th scope="col">Donde</th>
+                <th scope="col">Fecha de inicio</th>
+                <th scope="col">Fecha de fin</th>
+                <th scope="col">Recursos</th>
+                <th scope="col">Responsables</th>
+              </tr>
+            </thead>
+
+            <div *ngFor="let pr of problema | filter:id">
+              <ng-container *ngFor="let a of pr.accion let qI = index">
+                <tbody>
+                  <tr>
+                    <th scope="row">{{pr.accion}}</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </ng-container>
+            </div>
+          </table>
+
+          <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
+          text-align: left; margin-bottom: 10px; color: #444e6a;"> <em style="margin-left: 12px;">4.1 Ejecutar: El
+              equipo técnico de control de la
+              calidad del HEJCA comprobó la implementación de los cambios a través de la realización de las siguientes
+              acciones:</em></label>
+
+          <div class="row mb-3">
+            <table class="table table-bordered">
+              <tbody>
+                <tr>
+                  <td><textarea class="form-control" style="height: 100px">a.</textarea></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
+          text-align: left; margin-bottom: 10px; color: #444e6a;"> <em style="margin-left: 12px;">4.2 Verificar:  Escriba aquí qué es lo que sucedió con la situación inicial que quería ser mejorada, luego de que se implementó el o los  cambio/s en este ciclo rápido (mejoró, quedó igual, empeoró?) Respalde lo dicho 
+          registrando el valor del indicador ANTES del Ciclo Rápido y DESPUÉS  del Ciclo Rápido</em></label>
+
+
+          <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
+          text-align: left; margin-bottom: 10px; color: #444e6a;"> <em style="margin-left: 12px;">4.3 Actuar: Escriba aquí qué es lo que el Equipo de 
+          Mejoramiento de la Calidad  decidió hacer luego de la implementación de este ciclo rápido para el mejoramiento y de observar los resultados obtenidos.</em></label>
+
+          <table class="table caption-top">
+            <caption>Lista de usuarios</caption>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Cargos</th>
+                <th scope="col">firma</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Aprobado por:</th>
+                <td><textarea></textarea></td>
+                <td><textarea></textarea></td>
+                <td><textarea></textarea></td>
+              </tr>
+              <tr>
+                <th scope="row">Revisado por:</th>
+                <td><textarea></textarea></td>
+                <td><textarea></textarea></td>
+                <td><textarea></textarea></td>
+              </tr>
+              <tr>
+                <th scope="row">Elaborado por:</th>
+                <td><textarea></textarea></td>
+                <td><textarea></textarea></td>
+                <td><textarea></textarea></td>
+              </tr>
+            </tbody>
+          </table>
+
         </form>
 
       </div>
