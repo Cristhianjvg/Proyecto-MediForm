@@ -1,176 +1,194 @@
-
-
 <body>
 
-    <!-- ======= Header ======= -->
-    <app-header></app-header>
-    <!-- End Header -->
-  
-    <!-- ======= Sidebar ======= -->
-    <app-navbar></app-navbar>
-  
-    <main id="main" class="main" style="background-color: white;">
-  
-      <div class="pagetitle">
-        <h1>MediForm</h1>
-        <nav>
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item active">MediForm</li>
-          </ol>
-        </nav>
-      </div><!-- End Page Title -->
-  
-      <div class="card mb-3" style="background-color: rgba(255, 255, 255, 0.418);">
-  
-        <div class="card-body">
-  
-          <div class="pt-4 pb-2">
-            <h5 class="card-title text-center pb-0 fs-4">FORMULARIO</h5>
+  <!-- ======= Header ======= -->
+  <app-header></app-header>
+  <!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <app-navbar></app-navbar>
+
+  <main id="main" class="main" style="background-color: white;">
+
+    <div class="pagetitle">
+      <h1>MediForm</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">MediForm</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <div class="card mb-3" style="background-color: rgba(255, 255, 255, 0.418);">
+
+      <div class="card-body">
+
+        <div class="pt-4 pb-2">
+          <h5 class="card-title text-center pb-0 fs-4">FORMULARIO</h5>
+        </div>
+
+        <form class="row g-3 needs-validation" novalidate style="font-size: 16px;">
+
+          <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
+              text-align: left; margin-bottom: 10px; color: #444e6a;"> <b> 1. Identificar: ¿Cual es el problema?
+              Definir y priorizar que hay que mejorar</b></label>
+          <div class="row mb-3">
+
+            <div class="col-sm-12" style="margin-bottom: 50px;">
+              <select id="id" class="form-select" aria-label="Default select example">
+                <option *ngFor="let pr of problema" [value]="pr.id">{{pr.DescripcionProblema}}
+                </option>
+              </select>
+            </div>
           </div>
-  
-          
-  
-  
-          <form class="row g-3 needs-validation" novalidate style="font-size: 16px;">
-  
-              <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
-              text-align: left; margin-bottom: 10px; color: #444e6a;"> <b> 1. Identificar: ¿Cual es el problema? Definir y priorizar que hay que mejorar</b></label>
-              <div class="row mb-3">
-                
-                <div class="col-sm-12" style="margin-bottom: 50px;">
-                  <select class="form-select" aria-label="Default select example">
-                    <option *ngFor="let pr of problema" [value]="pr.id">{{pr.DescripcionProblema}}</option>
-                  </select>
-                </div>
-              </div>
-    
-              <label class="col-sm-12 col-form-label" style="border-bottom: 2px solid #C4D79B; 
-              text-align: left; margin-bottom: 10px; color: #444e6a;"> <b>2. Analizar: Comprender el problema y encontrar las causas</b> <br> <br> <em style="margin-left: 12px;">2.1 Causas</em> </label>
-              <div class="row mb-3" >
-                
-                <div class="col-sm-12" style="margin-bottom: 50px;">
-                  <select class="form-select" aria-label="Default select example">
-                    <option *ngFor="let cau of causa" [value]="cau.id">{{cau.DescripcionCausa}}</option>
-                  </select>
-                </div>
-              </div>
 
-              <label class="col-sm-12 col-form-label" style="border-bottom: 2px solid #C4D79B; 
-              text-align: left; margin-bottom: 10px;"> <em style="margin-left: 12px; color: #444e6a;">2.2 Clasifique la celda correspondiente el ambito o aspecto que pertenece la causa identificada</em> </label>
-              <div class="row mb-3">
-                <div class="col-sm-10">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck1">
-                    <label class="form-check-label" for="gridCheck1">
-                      organizacional
-                    </label>
-                  </div>
+          <label class="col-sm-12 col-form-label" style="border-bottom: 2px solid #C4D79B; 
+              text-align: left; margin-bottom: 10px; color: #444e6a;"> <b>2. Analizar: Comprender el problema y
+              encontrar las causas</b> <br> <br> <em style="margin-left: 12px;">2.1 Causas</em> </label>
+          <div class="row mb-3">
 
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
-                    <label class="form-check-label" for="gridCheck2">
-                      Tecnico/Cientifico
-                    </label>
-                  </div>
-
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
-                    <label class="form-check-label" for="gridCheck2">
-                      Administrativo
-                    </label>
-                  </div>
-
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
-                    <label class="form-check-label" for="gridCheck2">
-                      Financiero
-                    </label>
-                  </div>
-
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
-                    <label class="form-check-label" for="gridCheck2">
-                      Otro
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-              <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
-              text-align: left; margin-bottom: 10px; color: #444e6a;"> <b> 3. Desarrollar: Formular hipotesis de los cambios</b> <br> <br> <em style="margin-left: 12px;">3.1 ¿Que es lo que se quiere Lograr?</em></label>
-              <div class="row mb-3">
-                <div class="col-sm-10">
-                  <textarea class="form-control" style="height: 100px"></textarea>
-                </div>
-              </div>
-
-              <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
-              text-align: left; margin-bottom: 10px; color: #444e6a;"> <em style="margin-left: 12px;">  3.2 ¿Cómo sabremos que el cambio realizado produjo una mejora en el proceso?</em></label>
-                <label for="">N° de capacitaciones realizaas a profesionales de la salud sobre salud mental de los pacientes</label>
-                <div class="row mb-3">
-                  <label for="inputNumber" class="col-sm-1 col-form-label" >Indicador</label>
-                  <div class="col-sm-2">
-                    
-                    <input type="number" class="form-control">
-                  </div>
-                </div>
-
-                <label for="">N° de capacitaciones realizaas a profesionales de la salud sobre salud mental de los pacientes</label>
-                <div class="row mb-3">
-                  <label for="inputNumber" class="col-sm-1 col-form-label">Indicador 2:</label>
-                  <div class="col-sm-2">
-                    
-                    <input type="number" class="form-control">
-                  </div>
-                </div>
-
-                <label for="">N° de capacitaciones realizaas a profesionales de la salud sobre salud mental de los pacientes</label>
-                <div class="row mb-3">
-                  <label for="inputNumber" class="col-sm-1 col-form-label">Indicador 3:</label>
-                  <div class="col-sm-2">
-                    
-                    <input type="number" class="form-control">
-                  </div>
-                </div>
-
-              <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
-              text-align: left; margin-bottom: 10px; color: #444e6a;"> <em style="margin-left: 12px;">3.3¿Cuáles son los cambios, las estrategias o las intervenciones que se quiere introducir en el proceso?</em></label>
-              <div class="row mb-3">
+            <div class="col-sm-12" style="margin-bottom: 50px;">
+              <select class="form-select" aria-label="Default select example">
+                <option *ngFor="let cau of causa">{{cau.DescripcionCausa}}</option>
+              </select>
+            </div>
+            <div *ngFor="let pr of problema | filter:id">
+              <ng-container *ngFor="let a of pr.causas let oI = index">
                 <table class="table table-bordered">
                   <thead>
                     <tr>
-                      <th scope="col" style="text-align: center;">Cambio 1 </th>
-                      <th scope="col" style="text-align: center;">Cambio 2 </th>
-                      <th scope="col" style="text-align: center;">Cambio 3 </th>
+                      <th scope="col" style="text-align: center;">Causa {{ oI + 1 }} </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td><textarea class="form-control" style="height: 100px"></textarea></td>
-                      <td><textarea class="form-control" style="height: 100px"></textarea></td>
-                      <td><textarea class="form-control" style="height: 100px"></textarea></td>
+                      <td><textarea class="form-control" style="height: 100px">{{pr.causas}}</textarea></td>
                     </tr>
-                    
                   </tbody>
                 </table>
-                <!--<div class="col-sm-10">
-                  <textarea class="form-control" style="height: 100px"></textarea>
-                </div>-->
+              </ng-container>
+            </div>
+          </div>
+
+          <label class="col-sm-12 col-form-label" style="border-bottom: 2px solid #C4D79B; 
+              text-align: left; margin-bottom: 10px;"> <em style="margin-left: 12px; color: #444e6a;">2.2 Clasifique la
+              celda correspondiente el ambito o aspecto que pertenece la causa identificada</em> </label>
+          <div class="row mb-3">
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                <label class="form-check-label" for="gridCheck1">
+                  organizacional
+                </label>
               </div>
 
-              <div class="row mb-3">
-                <div class="col-sm-10" style="margin-top: 20px; margin-left: 1000px;">
-                  <button type="submit" class="btn btn-primary" style="background-color: #C4D79B;">Guardar </button>
-                </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                <label class="form-check-label" for="gridCheck2">
+                  Tecnico/Cientifico
+                </label>
               </div>
-          </form>
-  
-        </div>
-      </div>    
-  
-    </main><!-- End #main -->
-  
-  </body>
-  <app-footer></app-footer>
-  
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                <label class="form-check-label" for="gridCheck2">
+                  Administrativo
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                <label class="form-check-label" for="gridCheck2">
+                  Financiero
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                <label class="form-check-label" for="gridCheck2">
+                  Otro
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
+              text-align: left; margin-bottom: 10px; color: #444e6a;"> <b> 3. Desarrollar: Formular hipotesis de los
+              cambios</b> <br> <br> <em style="margin-left: 12px;">3.1 ¿Que es lo que se quiere Lograr?</em></label>
+          <div class="row mb-3">
+            <div class="col-sm-10">
+              <textarea class="form-control" style="height: 100px"></textarea>
+            </div>
+          </div>
+
+          <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
+              text-align: left; margin-bottom: 10px; color: #444e6a;"> <em style="margin-left: 12px;"> 3.2 ¿Cómo
+              sabremos que el cambio realizado produjo una mejora en el proceso?</em></label>
+          <div *ngFor="let pr of problema | filter:id">
+            <ng-container *ngFor="let a of pr.indicador let qI = index">
+              <label for="">{{pr.indicador}}
+                <div class="row mb-3">
+                  <label for="inputNumber" class="col-sm-1 col-form-label">N° 1 = </label>
+                  <div class="col-sm-2">
+                    <input type="number" id="number1" class="form-control">
+                  </div>
+                  <label for="inputNumber" class="col-sm-1 col-form-label">N° 2 = </label>
+                  <div class="col-sm-2">
+                    <input type="number" id="number2" class="form-control">
+                  </div>
+
+                  <div class="col-sm-3 justify-content-right" (click)="getIndicador()">
+                    <button type="submit" class="btn btn-primary" style="background-color: #C4D79B;">Calcular </button>
+                  </div>
+
+                  <div>
+                    <p>Indicador {{qI+1}} : {{total}}%</p>
+                  </div>
+                </div>
+              </label>
+            </ng-container>
+          </div>
+
+
+
+
+
+          <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
+              text-align: left; margin-bottom: 10px; color: #444e6a;"> <em style="margin-left: 12px;">3.3¿Cuáles son
+              los cambios, las estrategias o las intervenciones que se quiere introducir en el proceso?</em></label>
+          <div class="row mb-3">
+            <div *ngFor="let pr of problema | filter:id">
+              <ng-container *ngFor="let a of pr.accion let qI = index">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col" style="text-align: center;">Cambio {{ qI + 1 }} </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><textarea class="form-control" style="height: 100px">{{pr.accion}}</textarea></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </ng-container>
+            </div>
+            <!--<div class="col-sm-10">
+                  <textarea class="form-control" style="height: 100px"></textarea>
+                </div>-->
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-sm-10" style="margin-top: 20px; margin-left: 1000px;">
+              <button type="submit" class="btn btn-primary" style="background-color: #C4D79B;">Guardar </button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+  </main><!-- End #main -->
+
+</body>
+<app-footer></app-footer>

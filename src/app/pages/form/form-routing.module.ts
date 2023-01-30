@@ -3,10 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FormComponent } from './form.component';
 
-const routes: Routes = [{ path: '', component: FormComponent }];
+const routes: Routes = [{ path: '', component: FormComponent },
+{
+  path: 'form/:id',
+  component: FormComponent,
+}];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule,SharedModule]
+  exports: [RouterModule, SharedModule]
 })
 export class FormRoutingModule { }
