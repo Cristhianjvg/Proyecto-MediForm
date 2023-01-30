@@ -5,4 +5,7 @@ export interface Problemas {
     id?: number;
     DescripcionProblema: string;
     TipoProblema: DocumentReference;
+    accion:string;
+    causas:string;
+    indicador:string;
 }

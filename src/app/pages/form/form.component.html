@@ -1,430 +1,307 @@
-
-
 <body>
 
-    <!-- ======= Header ======= -->
-    <header id="header" class="header fixed-top d-flex align-items-center">
-  
-      <div class="d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
-          <span class="d-none d-lg-block">MediForm</span>
-        </a>
-        <i class="bi bi-list toggle-sidebar-btn"></i>
-      </div><!-- End Logo -->
-  
-      <div class="search-bar">
-        <form class="search-form d-flex align-items-center" method="POST" action="#">
-          <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-          <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-        </form>
-      </div><!-- End Search Bar -->
-  
-      <nav class="header-nav ms-auto">
-        <ul class="d-flex align-items-center">
-  
-          <li class="nav-item d-block d-lg-none">
-            <a class="nav-link nav-icon search-bar-toggle " href="#">
-              <i class="bi bi-search"></i>
-            </a>
-          </li><!-- End Search Icon-->
-  
-          <!--<li class="nav-item dropdown">
-  
-            <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-              <i class="bi bi-bell"></i>
-              <span class="badge bg-primary badge-number">4</span>
-            </a>
-  
-            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
-              <li class="dropdown-header">
-                You have 4 new notifications
-                <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-  
-              <li class="notification-item">
-                <i class="bi bi-exclamation-circle text-warning"></i>
-                <div>
-                  <h4>Lorem Ipsum</h4>
-                  <p>Quae dolorem earum veritatis oditseno</p>
-                  <p>30 min. ago</p>
-                </div>
-              </li>
-  
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-  
-              <li class="notification-item">
-                <i class="bi bi-x-circle text-danger"></i>
-                <div>
-                  <h4>Atque rerum nesciunt</h4>
-                  <p>Quae dolorem earum veritatis oditseno</p>
-                  <p>1 hr. ago</p>
-                </div>
-              </li>
-  
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-  
-              <li class="notification-item">
-                <i class="bi bi-check-circle text-success"></i>
-                <div>
-                  <h4>Sit rerum fuga</h4>
-                  <p>Quae dolorem earum veritatis oditseno</p>
-                  <p>2 hrs. ago</p>
-                </div>
-              </li>
-  
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-  
-              <li class="notification-item">
-                <i class="bi bi-info-circle text-primary"></i>
-                <div>
-                  <h4>Dicta reprehenderit</h4>
-                  <p>Quae dolorem earum veritatis oditseno</p>
-                  <p>4 hrs. ago</p>
-                </div>
-              </li>
-  
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li class="dropdown-footer">
-                <a href="#">Show all notifications</a>
-              </li>
-  
-            </ul>
-  
-          </li>
-  
-          <li class="nav-item dropdown">
-  
-            <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-              <i class="bi bi-chat-left-text"></i>
-              <span class="badge bg-success badge-number">3</span>
-            </a>
-  
-            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
-              <li class="dropdown-header">
-                You have 3 new messages
-                <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-  
-              <li class="message-item">
-                <a href="#">
-                  <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
-                  <div>
-                    <h4>Maria Hudson</h4>
-                    <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                    <p>4 hrs. ago</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-  
-              <li class="message-item">
-                <a href="#">
-                  <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
-                  <div>
-                    <h4>Anna Nelson</h4>
-                    <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                    <p>6 hrs. ago</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-  
-              <li class="message-item">
-                <a href="#">
-                  <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
-                  <div>
-                    <h4>David Muldon</h4>
-                    <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                    <p>8 hrs. ago</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-  
-              <li class="dropdown-footer">
-                <a href="#">Show all messages</a>
-              </li>
-  
-            </ul>
-  
-          </li>-->
-  
-          <!--
-          <li class="nav-item dropdown pe-3">
-  
-            <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-              <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-              <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
-            </a>
-  
-            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-              <li class="dropdown-header">
-                <h6>Kevin Anderson</h6>
-                <span>Web Designer</span>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-  
-              <li>
-                <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                  <i class="bi bi-person"></i>
-                  <span>My Profile</span>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-  
-              <li>
-                <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                  <i class="bi bi-gear"></i>
-                  <span>Account Settings</span>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-  
-              <li>
-                <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                  <i class="bi bi-question-circle"></i>
-                  <span>Need Help?</span>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-  
-              <li>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <i class="bi bi-box-arrow-right"></i>
-                  <span>Sign Out</span>
-                </a>
-              </li>
-  
-            </ul>
-          </li>-->
-  
-        </ul>
-      </nav> 
-  
-    </header><!-- End Header -->
-  
-    <!-- ======= Sidebar ======= -->
-    <aside id="sidebar" class="sidebar">
-  
-      <ul class="sidebar-nav" id="sidebar-nav">
-  
-        <li class="nav-item">
-          <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="../form">
-            <i class="bi bi-menu-button-wide"></i><span>Llenar un nuevo formulario</span><i class="bi bi-chevron-down ms-auto"></i>
-          </a>
-        </li><!-- End Components Nav -->
-  
-        <li class="nav-item">
-          <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-            <i class="bi bi-journal-text"></i><span>Avances</span><i class="bi bi-chevron-down ms-auto"></i>
-          </a>
-        </li><!-- End Forms Nav -->
-  
-        <li class="nav-item">
-          <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-            <i class="bi bi-journal-text"></i><span>Ver calendario</span><i class="bi bi-chevron-down ms-auto"></i>
-          </a>
-        </li><!-- End Forms Nav -->
-  
-        <li class="nav-item">
-          <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-            <i class="bi bi-journal-text"></i><span>Historial de Registros</span><i class="bi bi-chevron-down ms-auto"></i>
-          </a>
-        </li><!-- End Forms Nav -->
-      </ul>
-  
-    </aside><!-- End Sidebar-->
-  
-    <main id="main" class="main" style="background-color: white;">
-  
-      <div class="pagetitle">
-        <h1>MediForm</h1>
-        <nav>
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item active">MediForm</li>
-          </ol>
-        </nav>
-      </div><!-- End Page Title -->
-  
-      <div class="card mb-3" style="background-color: rgba(255, 255, 255, 0.418);">
-  
-        <div class="card-body">
-  
-          <div class="pt-4 pb-2">
-            <h5 class="card-title text-center pb-0 fs-4">FORMULARIO</h5>
+  <!-- ======= Header ======= -->
+  <app-header></app-header>
+  <!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <app-navbar></app-navbar>
+
+  <main id="main" class="main" style="background-color: white;">
+
+    <div class="pagetitle">
+      <h1>MediForm</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">MediForm</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <div class="card mb-3" style="background-color: rgba(255, 255, 255, 0.418);">
+
+      <div class="card-body">
+
+        <div class="pt-4 pb-2">
+          <h5 class="card-title text-center pb-0 fs-4">FORMULARIO</h5>
+        </div>
+
+        <form class="row g-3 needs-validation" novalidate style="font-size: 16px;">
+
+          <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
+              text-align: left; margin-bottom: 10px; color: #444e6a;"> <b> 1. Identificar: ¿Cual es el problema?
+              Definir y priorizar que hay que mejorar</b></label>
+          <div class="row mb-3">
+
+            <div class="col-sm-12" style="margin-bottom: 50px;">
+              <select id="id" class="form-select" aria-label="Default select example">
+                <option *ngFor="let pr of problema" [value]="pr.id">{{pr.DescripcionProblema}}
+                </option>
+              </select>
+            </div>
           </div>
-  
-          
-  
-  
-          <form class="row g-3 needs-validation" novalidate style="font-size: 16px;">
-  
-              <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
-              text-align: left; margin-bottom: 10px; color: #444e6a;"> <b> 1. Identificar: ¿Cual es el problema? Definir y priorizar que hay que mejorar</b></label>
-              <div class="row mb-3">
-                
-                <div class="col-sm-12" style="margin-bottom: 50px;">
-                  <select class="form-select" aria-label="Default select example">
-                    <option *ngFor="let pr of problema" [value]="pr.id">{{pr.DescripcionProblema}}</option>
-                  </select>
-                </div>
-              </div>
-    
-              <label class="col-sm-12 col-form-label" style="border-bottom: 2px solid #C4D79B; 
-              text-align: left; margin-bottom: 10px; color: #444e6a;"> <b>2. Analizar: Comprender el problema y encontrar las causas</b> <br> <br> <em style="margin-left: 12px;">2.1 Causas</em> </label>
-              <div class="row mb-3" >
-                
-                <div class="col-sm-12" style="margin-bottom: 50px;">
-                  <select class="form-select" aria-label="Default select example">
-                    <option *ngFor="let cau of causa" [value]="cau.id">{{cau.DescripcionCausa}}</option>
-                  </select>
-                </div>
-              </div>
 
-              <label class="col-sm-12 col-form-label" style="border-bottom: 2px solid #C4D79B; 
-              text-align: left; margin-bottom: 10px;"> <em style="margin-left: 12px; color: #444e6a;">2.2 Clasifique la celda correspondiente el ambito o aspecto que pertenece la causa identificada</em> </label>
-              <div class="row mb-3">
-                <div class="col-sm-10">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck1">
-                    <label class="form-check-label" for="gridCheck1">
-                      organizacional
-                    </label>
-                  </div>
+          <label class="col-sm-12 col-form-label" style="border-bottom: 2px solid #C4D79B; 
+              text-align: left; margin-bottom: 10px; color: #444e6a;"> <b>2. Analizar: Comprender el problema y
+              encontrar las causas</b> <br> <br> <em style="margin-left: 12px;">2.1 Causas</em> </label>
+          <div class="row mb-3">
 
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
-                    <label class="form-check-label" for="gridCheck2">
-                      Tecnico/Cientifico
-                    </label>
-                  </div>
-
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
-                    <label class="form-check-label" for="gridCheck2">
-                      Administrativo
-                    </label>
-                  </div>
-
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
-                    <label class="form-check-label" for="gridCheck2">
-                      Financiero
-                    </label>
-                  </div>
-
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
-                    <label class="form-check-label" for="gridCheck2">
-                      Otro
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-              <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
-              text-align: left; margin-bottom: 10px; color: #444e6a;"> <b> 3. Desarrollar: Formular hipotesis de los cambios</b> <br> <br> <em style="margin-left: 12px;">3.1 ¿Que es lo que se quiere Lograr?</em></label>
-              <div class="row mb-3">
-                <div class="col-sm-10">
-                  <textarea class="form-control" style="height: 100px"></textarea>
-                </div>
-              </div>
-
-              <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
-              text-align: left; margin-bottom: 10px; color: #444e6a;"> <em style="margin-left: 12px;">  3.2 ¿Cómo sabremos que el cambio realizado produjo una mejora en el proceso?</em></label>
-                <label for="">N° de capacitaciones realizaas a profesionales de la salud sobre salud mental de los pacientes</label>
-                <div class="row mb-3">
-                  <label for="inputNumber" class="col-sm-1 col-form-label" >Indicador</label>
-                  <div class="col-sm-2">
-                    
-                    <input type="number" class="form-control">
-                  </div>
-                </div>
-
-                <label for="">N° de capacitaciones realizaas a profesionales de la salud sobre salud mental de los pacientes</label>
-                <div class="row mb-3">
-                  <label for="inputNumber" class="col-sm-1 col-form-label">Indicador 2:</label>
-                  <div class="col-sm-2">
-                    
-                    <input type="number" class="form-control">
-                  </div>
-                </div>
-
-                <label for="">N° de capacitaciones realizaas a profesionales de la salud sobre salud mental de los pacientes</label>
-                <div class="row mb-3">
-                  <label for="inputNumber" class="col-sm-1 col-form-label">Indicador 3:</label>
-                  <div class="col-sm-2">
-                    
-                    <input type="number" class="form-control">
-                  </div>
-                </div>
-
-              <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
-              text-align: left; margin-bottom: 10px; color: #444e6a;"> <em style="margin-left: 12px;">3.3¿Cuáles son los cambios, las estrategias o las intervenciones que se quiere introducir en el proceso?</em></label>
-              <div class="row mb-3">
+            <div class="col-sm-12" style="margin-bottom: 50px;">
+              <select class="form-select" aria-label="Default select example">
+                <option *ngFor="let cau of causa">{{cau.DescripcionCausa}}</option>
+              </select>
+            </div>
+            <div *ngFor="let pr of problema | filter:id">
+              <ng-container *ngFor="let a of pr.causas let oI = index">
                 <table class="table table-bordered">
                   <thead>
                     <tr>
-                      <th scope="col" style="text-align: center;">Cambio 1 </th>
-                      <th scope="col" style="text-align: center;">Cambio 2 </th>
-                      <th scope="col" style="text-align: center;">Cambio 3 </th>
+                      <th scope="col" style="text-align: center;">Causa {{ oI + 1 }} </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td><textarea class="form-control" style="height: 100px"></textarea></td>
-                      <td><textarea class="form-control" style="height: 100px"></textarea></td>
-                      <td><textarea class="form-control" style="height: 100px"></textarea></td>
+                      <td><textarea class="form-control" style="height: 100px">{{pr.causas[oI]}}</textarea></td>
                     </tr>
-                    
                   </tbody>
                 </table>
-                <!--<div class="col-sm-10">
-                  <textarea class="form-control" style="height: 100px"></textarea>
-                </div>-->
+              </ng-container>
+            </div>
+          </div>
+
+          <label class="col-sm-12 col-form-label" style="border-bottom: 2px solid #C4D79B; 
+              text-align: left; margin-bottom: 10px;"> <em style="margin-left: 12px; color: #444e6a;">2.2 Clasifique la
+              celda correspondiente el ambito o aspecto que pertenece la causa identificada</em> </label>
+          <div class="row mb-3">
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                <label class="form-check-label" for="gridCheck1">
+                  organizacional
+                </label>
               </div>
 
-              <div class="row mb-3">
-                <div class="col-sm-10" style="margin-top: 20px; margin-left: 1000px;">
-                  <button type="submit" class="btn btn-primary" style="background-color: #C4D79B;">Guardar </button>
-                </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                <label class="form-check-label" for="gridCheck2">
+                  Tecnico/Cientifico
+                </label>
               </div>
-          </form>
-  
-        </div>
-      </div>    
-  
-    </main><!-- End #main -->
-  
-  </body>
-  
-  
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                <label class="form-check-label" for="gridCheck2">
+                  Administrativo
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                <label class="form-check-label" for="gridCheck2">
+                  Financiero
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                <label class="form-check-label" for="gridCheck2">
+                  Otro
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
+              text-align: left; margin-bottom: 10px; color: #444e6a;"> <b> 3. Desarrollar: Formular hipotesis de los
+              cambios</b> <br> <br> <em style="margin-left: 12px;">3.1 ¿Que es lo que se quiere Lograr?</em></label>
+          <div class="row mb-3">
+            <div class="col-sm-10">
+              <textarea class="form-control" style="height: 100px"></textarea>
+            </div>
+          </div>
+
+          <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
+              text-align: left; margin-bottom: 10px; color: #444e6a;"> <em style="margin-left: 12px;"> 3.2 ¿Cómo
+              sabremos que el cambio realizado produjo una mejora en el proceso?</em></label>
+          <div *ngFor="let pr of problema | filter:id">
+            <ng-container *ngFor="let a of pr.indicador let qI = index">
+              <label for="">{{pr.indicador[qI]}}
+                <div class="row mb-3">
+                  <label for="inputNumber" class="col-sm-1 col-form-label">N° 1 = </label>
+                  <div class="col-sm-2">
+                    <input type="number" id="number1" class="form-control">
+                  </div>
+                  <label for="inputNumber" class="col-sm-1 col-form-label">N° 2 = </label>
+                  <div class="col-sm-2">
+                    <input type="number" id="number2" class="form-control">
+                  </div>
+
+                  <div class="col-sm-3 justify-content-right" (click)="getIndicador()">
+                    <button type="submit" class="btn btn-primary" style="background-color: #C4D79B;">Calcular </button>
+                  </div>
+
+                  <div>
+                    <p>Indicador {{qI+1}} : {{total}}%</p>
+                  </div>
+                </div>
+              </label>
+            </ng-container>
+          </div>
+
+
+
+
+
+          <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
+              text-align: left; margin-bottom: 10px; color: #444e6a;"> <em style="margin-left: 12px;">3.3¿Cuáles son
+              los cambios, las estrategias o las intervenciones que se quiere introducir en el proceso?</em></label>
+          <div class="row mb-3">
+            <div *ngFor="let pr of problema | filter:id">
+              <ng-container *ngFor="let a of pr.accion let qI = index">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col" style="text-align: center;">Cambio {{ qI + 1 }} </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><textarea class="form-control" style="height: 100px">{{pr.accion[qI]}}</textarea></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </ng-container>
+            </div>
+            <!--<div class="col-sm-10">
+                  <textarea class="form-control" style="height: 100px"></textarea>
+                </div>-->
+          </div>
+
+          <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
+              text-align: left; margin-bottom: 10px; color: #444e6a;"> <b> 4. Planificar</b></label>
+
+          <table class="table table-bordered" style="border-color: #C4D79B;">
+            <thead>
+              <tr>
+                <th scope="col">Cambio</th>
+                <th scope="col">Actividades</th>
+                <th scope="col">Donde</th>
+                <th scope="col">Fecha de inicio</th>
+                <th scope="col">Fecha de fin</th>
+                <th scope="col">Recursos</th>
+                <th scope="col">Responsables</th>
+              </tr>
+            </thead>
+
+            <!--<div >-->
+              <!--<ng-container >-->
+                <tbody *ngFor="let pr of problema | filter:id " >
+                  <tr *ngFor="let a of pr.accion let qI = index">
+                    <th scope="row">{{pr.accion[qI]}}</th>
+                    <td><div class="row mb-3">
+                      <div class="col-sm-10">
+                        <textarea class="form-control" style="height: 50px"></textarea>
+                      </div>
+                    </div></td>
+                    <td><div class="row mb-3">
+                      <div class="col-sm-10">
+                        <textarea class="form-control" style="height: 50px"></textarea>
+                      </div>
+                    </div></td>
+                    <td><div class="row mb-3">
+                      <div class="col-sm-10">
+                        <textarea class="form-control" style="height: 50px"></textarea>
+                      </div>
+                    </div></td>
+                    <td><div class="row mb-3">
+                      <div class="col-sm-10">
+                        <textarea class="form-control" style="height: 50px"></textarea>
+                      </div>
+                    </div></td>
+                    <td><div class="row mb-3">
+                      <div class="col-sm-10">
+                        <textarea class="form-control" style="height: 50px"></textarea>
+                      </div>
+                    </div></td>
+                    <td><div class="row mb-3">
+                      <div class="col-sm-10">
+                        <textarea class="form-control" style="height: 50px"></textarea>
+                      </div>
+                    </div></td>
+                  </tr>
+                </tbody>
+              <!--</ng-container>-->
+            <!--</div>-->
+          </table>
+
+          <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
+          text-align: left; margin-bottom: 10px; color: #444e6a;"> <em style="margin-left: 12px;">4.1 Ejecutar: El
+              equipo técnico de control de la
+              calidad del HEJCA comprobó la implementación de los cambios a través de la realización de las siguientes
+              acciones:</em></label>
+
+          <div class="row mb-3">
+            <table class="table table-bordered">
+              <tbody>
+                <tr>
+                  <td><textarea class="form-control" style="height: 100px">a.</textarea></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
+          text-align: left; margin-bottom: 10px; color: #444e6a;"> <em style="margin-left: 12px;">4.2 Verificar:  Escriba aquí qué es lo que sucedió con la situación inicial que quería ser mejorada, luego de que se implementó el o los  cambio/s en este ciclo rápido (mejoró, quedó igual, empeoró?) Respalde lo dicho 
+          registrando el valor del indicador ANTES del Ciclo Rápido y DESPUÉS  del Ciclo Rápido</em></label>
+
+
+          <label class="col-sm-12 col-form-label" style=" border-bottom: 2px solid #C4D79B;
+          text-align: left; margin-bottom: 10px; color: #444e6a;"> <em style="margin-left: 12px;">4.3 Actuar: Escriba aquí qué es lo que el Equipo de 
+          Mejoramiento de la Calidad  decidió hacer luego de la implementación de este ciclo rápido para el mejoramiento y de observar los resultados obtenidos.</em></label>
+
+          <table class="table caption-top">
+            <caption>Lista de usuarios</caption>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Cargos</th>
+                <th scope="col">firma</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Aprobado por:</th>
+                <td><textarea></textarea></td>
+                <td><textarea></textarea></td>
+                <td><textarea></textarea></td>
+              </tr>
+              <tr>
+                <th scope="row">Revisado por:</th>
+                <td><textarea></textarea></td>
+                <td><textarea></textarea></td>
+                <td><textarea></textarea></td>
+              </tr>
+              <tr>
+                <th scope="row">Elaborado por:</th>
+                <td><textarea></textarea></td>
+                <td><textarea></textarea></td>
+                <td><textarea></textarea></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="row mb-3">
+            <div class="col-sm-3" style="margin-top: 20px; margin-left: 1000px;">
+              <button type="submit" class="btn btn-primary" style="background-color: #C4D79B;">Guardar </button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </main><!-- End #main -->
+
+</body>
+<app-footer></app-footer>
