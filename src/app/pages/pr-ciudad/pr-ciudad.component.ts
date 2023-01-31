@@ -4,6 +4,8 @@ import { CiudadService } from 'src/app/core/service/ciudad.service';
 import { Ciudad } from 'src/app/models/ciudad';
 import { ProvinciaService } from 'src/app/core/service/provincia.service';
 import { Provincias } from 'src/app/models/provincias';
+import { HospitalService } from 'src/app/core/service/hospital.service';
+import { Hospital } from 'src/app/models/hospital';
 
 
 @Component({
@@ -15,8 +17,10 @@ export class PrCiudadComponent implements OnInit {
 
   ciudad: Ciudad[] | undefined;
   provincia: Provincias[] | undefined;
+  hospitales: Hospital[] | undefined;
 
-  constructor(private ciudadService: CiudadService, private provinciaService : ProvinciaService){
+  constructor(private ciudadService: CiudadService, private provinciaService : ProvinciaService,
+    private hospitalService: HospitalService){
 
   }
   //@Input() ciudad$: Observable<Ciudad[]>;
@@ -26,6 +30,8 @@ export class PrCiudadComponent implements OnInit {
     this.getAllCiudades();
     
     this.getAllProvincias();
+
+    this.getAllHospitales();
   }
 
   getAllCiudades(){
@@ -40,6 +46,15 @@ export class PrCiudadComponent implements OnInit {
     this.provinciaService.getProvincias().subscribe((res: Provincias[])=> {
       this.provincia = res
     })
+  }
+
+  
+  getAllHospitales(){
+    this.hospitalService.getHospital().subscribe((res:Hospital[]) => {
+      this.hospitales = res
+      console.log(res)
+    })
+    
   }
 
 }
