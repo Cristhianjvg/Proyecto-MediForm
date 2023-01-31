@@ -49,12 +49,14 @@
               <label for="" style="margin-bottom: 10px;">Para ingresar empieza:</label>
               <select class="form-select" aria-label="Default select example"
                style="border-radius: 20px; font-size: 20px; background-color: #C4D79B;">
+               <option value="0">Provincia</option>
                <option *ngFor="let pr of provincia" [value]="pr.id">{{pr.NombreProvincia}}</option>
               </select>
             </div>
 
             <div class="col-sm-12" style="margin: 0px 0px 0px 50px; width: 400px;">
               <select class="form-select" aria-label="Default select example" style="border-radius: 20px; font-size: 20px; background-color: #C4D79B;">
+                <option value="0">Ciudad</option>
                 <option *ngFor="let city of ciudad" [value]="city.id">{{city.NombreCiudad}}</option>
               </select>
             </div>
