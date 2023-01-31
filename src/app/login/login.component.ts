@@ -1,7 +1,12 @@
 import { Component, OnInit} from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { FormGroup, NgForm } from '@angular/forms';
 import { FormBuilder, Validators} from '@angular/forms';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { FirebaseCodeErrorService } from '../core/service/firebase-code-error.service';
 import { Usuario } from '../models/usuario';
+
 
 @Component({
   selector: 'app-login',
@@ -10,15 +15,18 @@ import { Usuario } from '../models/usuario';
 })
 export class LoginComponent implements OnInit{
 
-  public f = this.form.group({
-    NombreUsuario: ['', Validators.required],
-    ContrasenaUsuario: ['', Validators.required]
-  })
+  loginUsuario: FormGroup
 
-  formSubmitted = false;
+  
 
-  constructor(private form : FormBuilder){
-
+  constructor(private fb: FormBuilder,
+    private afAuth: AngularFireAuth,
+    private toastr: ToastrService, private router: Router,
+    private firebaseError: FirebaseCodeErrorService){
+      this.loginUsuario = this.fb.group({
+        UsuarioIngreso: ['', Validators.required],
+        ContrasenaUsuario: ['', Validators.required]
+      })
   }
 
   ngOnInit(): void{
@@ -26,16 +34,21 @@ export class LoginComponent implements OnInit{
   }
 
   login(){
+    const email = this.loginUsuario.value.UsuarioIngreso;
+    const password = this.loginUsuario.value.ContrasenaUsuario;
 
-    this.formSubmitted = true;
-    console.log("this.f", this.f);
+    this.afAuth.signInWithEmailAndPassword(email, password).then((user) =>{
+      console.log(user);
+      this.router.navigate(['/pr-ciudad'])
+      
+    }).catch((error) => {
 
-    const data: Usuario = {
-      NombreUsuario : this.f.controls.NombreUsuario.value,
-      ContrasenaUsuario: this.f.controls.ContrasenaUsuario.value
-    } as Array<Usuario>;
-
-    console.log(data);
+      console.log(error);
+      this.toastr.error(this.firebaseError.codeError(error.code), 'Error')
+      
+    })
   }
+
+
 
 }

@@ -22,13 +22,13 @@
                       </a>
                     </div>
   
-                    <form class="row g-3 needs-validation" novalidate [formGroup]="f" (ngSubmit)="login()">
+                    <form class="row g-3 needs-validation" novalidate [formGroup]="loginUsuario" (ngSubmit)="login()">
                       
   
                       <div class="col-12">
-                        <label for="NombreUsuario" class="form-label">Nombre de Usuario</label>
+                        <label for="UsuarioIngreso" class="form-label">Email</label>
                         <div class="input-group has-validation">
-                          <input type="text" name="NombreUsuario" class="form-control" id="NombreUsuario" placeholder="Ingresa tu Nombre de Usuario" required >
+                          <input type="email" name="UsuarioIngreso" class="form-control" id="UsuarioIngreso" placeholder="Ingresa tu Nombre de Usuario" required formControlName="UsuarioIngreso">
                           <div class="invalid-feedback">Porfavir ingrese su nombre de usuario</div>
 
                         </div>
@@ -36,7 +36,7 @@
   
                       <div class="col-12">
                         <label for="ContrasenaUsuario" class="form-label">Contraseña</label>
-                        <input type="ContrasenaUsuario" name="ContrasenaUsuario" class="form-control" id="ContrasenaUsuario" placeholder="Ingresa tu contraseña" required >
+                        <input type="password" name="ContrasenaUsuario" class="form-control" id="ContrasenaUsuario" placeholder="Ingresa tu contraseña" required formControlName="ContrasenaUsuario">
                         <div class="invalid-feedback">Porfavor ingrese su contraseña</div>
                       </div>
   
