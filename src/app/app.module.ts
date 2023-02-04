@@ -20,6 +20,7 @@ import { PrincipalComponent } from './pages/principal/principal.component';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { ToastrModule, ToastNoAnimation, ToastNoAnimationModule } from 'ngx-toastr';
 import { LoginComponent } from './login/login.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 
 
@@ -32,7 +33,8 @@ registerLocaleData(es);
     HomeComponent,
     RegisterComponent,
     PrincipalComponent,
-    LoginComponent
+    LoginComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
