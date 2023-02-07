@@ -6,6 +6,8 @@ import { ProvinciaService } from 'src/app/core/service/provincia.service';
 import { Provincias } from 'src/app/models/provincias';
 import { HospitalService } from 'src/app/core/service/hospital.service';
 import { Hospital } from 'src/app/models/hospital';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 
 @Component({
@@ -15,12 +17,20 @@ import { Hospital } from 'src/app/models/hospital';
 })
 export class PrCiudadComponent implements OnInit {
 
-  ciudad: Ciudad[] | undefined;
+  forms: FormGroup;
+
+  ciudad: Ciudad[] = [];
   provincia: Provincias[] | undefined;
   hospitales: Hospital[] | undefined;
+  id:any;
 
   constructor(private ciudadService: CiudadService, private provinciaService : ProvinciaService,
-    private hospitalService: HospitalService){
+    private hospitalService: HospitalService, private fb: FormBuilder){
+      this.forms = this.fb.group({
+        NombreCiudad: ['', Validators.required],
+        NombreProvincia: ['', Validators.required],
+        NombreHospital: ['', Validators.required]
+      })
 
   }
   //@Input() ciudad$: Observable<Ciudad[]>;
@@ -32,6 +42,8 @@ export class PrCiudadComponent implements OnInit {
     this.getAllProvincias();
 
     this.getAllHospitales();
+
+    this.getId();
   }
 
   getAllCiudades(){
@@ -40,6 +52,15 @@ export class PrCiudadComponent implements OnInit {
       console.log(res)
     })
     
+  }
+
+  getId() {
+    const select = document.querySelector("#NombreProvincia") as HTMLSelectElement;
+    select.addEventListener("change", (event: Event) => {
+      const selectedOption = select.options[select.selectedIndex] as HTMLOptionElement;
+      this.id = selectedOption.value;
+      console.log(`Selected option ID: ${this.id}`);
+    });
   }
 
   getAllProvincias(){
@@ -55,6 +76,10 @@ export class PrCiudadComponent implements OnInit {
       console.log(res)
     })
     
+  }
+
+  seleccionar(){
+    console.log(this.forms)
   }
 
 }
