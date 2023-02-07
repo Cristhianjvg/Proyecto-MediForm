@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- JS de jQuery y Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0."></script>
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <app-header></app-header>
+    <!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <app-navbar></app-navbar>
+
+    <main id="main" class="main" style="background-color: white;">
+
+        <div class="pagetitle">
+            <h1>MediForm</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">MediForm</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <div class="card mb-3" style="background-color: rgba(255, 255, 255, 0.418);">
+            <div class="card-body">
+                <div class="pt-4 pb-2">
+                    <h5 class="card-title text-center pb-0 fs-4">FORMULARIO</h5>
+                  </div>
+                <div class="col-sm-3 justify-content-right">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Formulario 1</h5>
+                          <p class="card-text">Formulario de ciclo rápido</p>
+                          <button (click)="generatePDF()" type="submit" class="btn btn-primary"
+                        style="background-color: #C4D79B;">Generar PDF</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main><!-- End #main -->
+
+</body>
+<app-footer></app-footer>
+
+</html>
