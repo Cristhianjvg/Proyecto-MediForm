@@ -21,10 +21,13 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { ToastrModule, ToastNoAnimation, ToastNoAnimationModule } from 'ngx-toastr';
 import { LoginComponent } from './login/login.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { CalendarioComponent } from './pages/calendario/calendario.component';
+import { FormularioComponent } from './pages/formulario/formulario.component';
+import { PdfMakeWrapper } from 'pdfmake-wrapper';
+import * as pdfFonts from "pdfmake/build/vfs_fonts";
 
 
-
-
+PdfMakeWrapper.setFonts(pdfFonts);
 registerLocaleData(es);
 
 @NgModule({
@@ -34,7 +37,9 @@ registerLocaleData(es);
     RegisterComponent,
     PrincipalComponent,
     LoginComponent,
-    InicioComponent
+    InicioComponent,
+    CalendarioComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,

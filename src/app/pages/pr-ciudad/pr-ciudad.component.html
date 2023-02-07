@@ -44,37 +44,41 @@
                 <img src="../../../assets/img/Shiny Happy Doctor Prescription.png" alt="" style="width: 400px;">
           </div>     
         </div>
+        
         <div class="derecha">
+          <form novalidate [formGroup]="forms" (ngSubmit)="seleccionar()">
             <div class="col-sm-12" style="margin: 200px 50px 50px 50px; width: 400px;">
               <label for="" style="margin-bottom: 10px;">Para ingresar empieza:</label>
               <select class="form-select" aria-label="Default select example"
-               style="border-radius: 20px; font-size: 20px; background-color: #C4D79B;">
-               <option value="0">Provincia</option>
-               <option *ngFor="let pr of provincia" [value]="pr.id">{{pr.NombreProvincia}}</option>
+               style="border-radius: 20px; font-size: 20px; background-color: #C4D79B;" formControlName="NombreProvincia">
+               
+               <option *ngFor="let pr of provincia" [value]="pr.id" >{{pr.NombreProvincia}}</option>
               </select>
             </div>
 
             <div class="col-sm-12" style="margin: 0px 0px 0px 50px; width: 400px;">
-              <select class="form-select" aria-label="Default select example" style="border-radius: 20px; font-size: 20px; background-color: #C4D79B;">
-                <option value="0">Ciudad</option>
-                <option *ngFor="let city of ciudad" [value]="city.id">{{city.NombreCiudad}}</option>
+              <select class="form-select" aria-label="Default select example" style="border-radius: 20px; font-size: 20px; background-color: #C4D79B;" 
+              formControlName="NombreCiudad">
+                
+                <option *ngFor="let city of ciudad " [value]="city.id" >{{city.NombreCiudad}}</option>
               </select>
             </div>
 
             <div class="col-sm-12"  style="margin: 50px 50px 0px 50px; width: 400px;">
 
               <select class="form-select" aria-label="Default select example"
-              style="border-radius: 20px; font-size: 20px; background-color: #C4D79B;">
-                <option value="0">Hospital</option>
-               <option *ngFor="let hosp of hospitales " [value]="hosp.id">{{hosp.NombreHospital}}</option>
+              style="border-radius: 20px; font-size: 20px; background-color: #C4D79B;" formControlName="NombreHospital">
+                
+               <option *ngFor="let hosp of hospitales " [value]="hosp.id" >{{hosp.NombreHospital}}</option>
               </select>
             </div>
             
 
-            <button style="float: right; margin-top: 200px; border-width: 0px; background-color: #FFF;"><a href="../../home" style="color: rgb(0, 0, 0);">siguiente ></a></button>
-            
+            <button type="submit" style="float: right; margin-top: 200px; border-width: 0px; background-color: #FFF;">siguiente ></button>
+          </form>
         </div>
       </div>
+     
       
     </main>
   
